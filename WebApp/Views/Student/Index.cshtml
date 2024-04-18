@@ -1,0 +1,29 @@
+﻿@model List<WebApp.Models.Student>
+<a href="/student/add">Thêm sinh viên</a>
+@* <link rel="stylesheet" href="~/css/bootstrap.min.css" /> *@
+<table class="table table-bordered" style="margin-top: 10px;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Giới tính</th>
+            <th>Ngày sinh</th>
+            <th>Set</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FullName</td>
+            <td>@item.Email</td>
+            <td>@(item.Gender ? "Nữ" : "Nam")</td>
+            <td>@item.DateOfBirth.ToString("dd/MM/yyyy")</td>
+            <td>
+                <a href="/student/delete/@item.Id">Xóa</a>
+                <a href="/student/edit/@item.Id">Sửa</a>
+            </td>
+        </tr>
+    }
+</table>

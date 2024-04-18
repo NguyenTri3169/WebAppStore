@@ -1,0 +1,59 @@
+﻿@* <form method="post">
+    <div>
+        <label>Tên</label>
+        <input type="text" name="fullname">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" />
+    </div>
+    <div>
+        <label>Giới tính</label>
+        <select name="gender">
+            <option value="0">Nam</option>
+            <option value="1">Nữ</option>
+        </select>
+    </div>
+    <div>
+        <label>Ngày sinh</label>
+        <input type="date" name="dateOfBirth"
+    </div>
+    <button>Lưu thay đổi</button>
+</form> *@
+
+<div asp-validation-summary="All"></div> @* Phải có trang _ViewImports.cshtml mới chạy được *@
+
+<form method="post">
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Họ Tên</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="fullname">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Mail</span>
+        </div>
+        <input type="email" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="email">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Giới Tính</span>
+        </div>
+        <select class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Ngày sinh</span>
+        </div>
+        <input type="date" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="dateOfBirth">
+    </div>
+    <input type="submit" class="form-control" style="margin-top: 20px;" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="Lưu">
+
+    @* <input type="submit" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="Lưu"> *@
+</form>
